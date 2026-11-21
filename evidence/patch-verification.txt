@@ -1,0 +1,78 @@
+Topic 06 patch verification
+Python 3.14.0
+Original: 7za.exe (1328640 bytes)
+  SHA-256 dd3757f31c97e33776f2590317d4fb12f2da075db3dbb1e3f94d0f2a01d84ffa
+[PASS] Original SHA-256 equals the official 7-Zip Extra 26.06 x64 7za.exe
+Image base 0x400000; patch VA 0x4777c8; section .text
+[PASS] RVA 0x777C8 maps to file offset 0x76BC8 (expected 0x76BC8)
+[PASS] Original 24 bytes equal reproduce.BEFORE
+
+topic06.1337: module 7za.exe, 17 entries
+[PASS] Patch module is 7za.exe
+[PASS] Every .1337 'old' byte matches the original EXE
+reproduce.py EXE SHA-256 985d511efd476fe87d7258e61abb3e99a03e7f63915203550bd28a46aae53b98
+.1337 EXE SHA-256        985d511efd476fe87d7258e61abb3e99a03e7f63915203550bd28a46aae53b98
+[PASS] .1337-applied EXE is byte-identical to the EXE built by reproduce.py
+[PASS] Patched SHA-256 equals reproduce.PATCHED_SHA
+[PASS] All 17 changed bytes lie in file offsets 0x76BC8-0x76BDF
+[PASS] Exactly 17 bytes change inside the 24-byte window
+
+Byte comparison (file offset / RVA / before / after)
+  * 076BC8  777C8  88 -> 89
+    076BC9  777C9  91 -> 91
+    076BCA  777CA  9A -> 9A
+    076BCB  777CB  00 -> 00
+    076BCC  777CC  00 -> 00
+    076BCD  777CD  00 -> 00
+  * 076BCE  777CE  88 -> C7
+  * 076BCF  777CF  91 -> 41
+  * 076BD0  777D0  9B -> 28
+  * 076BD1  777D1  00 -> 03
+    076BD2  777D2  00 -> 00
+    076BD3  777D3  00 -> 00
+  * 076BD4  777D4  88 -> 00
+  * 076BD5  777D5  91 -> 90
+  * 076BD6  777D6  9C -> 90
+  * 076BD7  777D7  00 -> 90
+  * 076BD8  777D8  00 -> 90
+  * 076BD9  777D9  00 -> 90
+  * 076BDA  777DA  88 -> 90
+  * 076BDB  777DB  91 -> 90
+  * 076BDC  777DC  9D -> 90
+  * 076BDD  777DD  00 -> 90
+  * 076BDE  777DE  00 -> 90
+  * 076BDF  777DF  00 -> 90
+
+Before (RVA 777C8):
+  777C8  88 91 9A 00 00 00     mov byte ptr [rcx+0x9A], dl
+  777CE  88 91 9B 00 00 00     mov byte ptr [rcx+0x9B], dl
+  777D4  88 91 9C 00 00 00     mov byte ptr [rcx+0x9C], dl
+  777DA  88 91 9D 00 00 00     mov byte ptr [rcx+0x9D], dl
+After (in-place instruction replacement with NOP padding):
+  777C8  89 91 9A 00 00 00     mov dword ptr [rcx+0x9A], edx   ; edx == 0 (xor edx,edx at RVA 777A0)
+  777CE  C7 41 28 03 00 00 00  mov dword ptr [rcx+0x28], 3     ; default level = 3 (Fast)
+  777D5  90                    nop
+  777D6  90                    nop
+  777D7  90                    nop
+  777D8  90                    nop
+  777D9  90                    nop
+  777DA  90                    nop
+  777DB  90                    nop
+  777DC  90                    nop
+  777DD  90                    nop
+  777DE  90                    nop
+  777DF  90                    nop
+
+x64dbg savedata export: x64dbg-export.bin (24 bytes) 89 91 9A 00 00 00 C7 41 28 03 00 00 00 90 90 90 90 90 90 90 90 90 90 90
+[PASS] x64dbg export equals reproduce.AFTER
+  spliced EXE SHA-256 985d511efd476fe87d7258e61abb3e99a03e7f63915203550bd28a46aae53b98
+[PASS] Original + x64dbg export is byte-identical to the reproduce.py EXE
+
+Candidate: 7za-patched-gui.exe (1328640 bytes)
+  SHA-256 985d511efd476fe87d7258e61abb3e99a03e7f63915203550bd28a46aae53b98
+[PASS] Candidate has the same size as the original
+  differing offsets: 76BC8, 76BCE, 76BCF, 76BD0, 76BD1, 76BD4, 76BD5, 76BD6, 76BD7, 76BD8, 76BD9, 76BDA, 76BDB, 76BDC, 76BDD, 76BDE, 76BDF
+[PASS] Candidate differs from the original only inside the patch window
+[PASS] Candidate is byte-identical to the reproduce.py EXE
+
+RESULT: PASS

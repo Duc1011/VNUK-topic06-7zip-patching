@@ -1,6 +1,7 @@
 """Reproduce Topic 06 with Python 3 on Windows x64."""
 import argparse
 from concurrent.futures import ThreadPoolExecutor
+from datetime import datetime, timezone
 import hashlib
 import json
 import os
@@ -8,6 +9,7 @@ from pathlib import Path
 import platform
 import random
 import re
+import shutil
 import subprocess
 import tempfile
 from urllib.request import urlopen
@@ -96,7 +98,10 @@ def main():
     parser.add_argument("--patched", type=Path, help="Test a prebuilt copy exported by x64dbg.")
     parser.add_argument("--work-root", type=Path, default=Path.cwd())
     parser.add_argument("--jobs", type=int, default=1, choices=range(1, 7))
+    parser.add_argument("--evidence-dir", type=Path,
+                        help="Copy results.json and logs/ here after a successful run (e.g. evidence).")
     args = parser.parse_args()
+    started = datetime.now(timezone.utc).isoformat(timespec="seconds")
     require(os.name == "nt" and platform.machine().upper() in {"AMD64", "X86_64"},
             "Run this experiment on Windows x64.")
     lab = Path(tempfile.mkdtemp(prefix="topic06-", dir=args.work_root.resolve()))
@@ -142,15 +147,25 @@ def main():
     rows["T07"] = {"test_exit_code": 0, "extract_exit_code": 0,
                    "extracted_sha256": extracted_hash, "pass": extracted_hash == input_hash}
     result = {
-        "windows": platform.platform(), "input_bytes": input_file.stat().st_size,
-        "input_sha256": input_hash, "original_sha256": ORIGINAL_SHA,
-        "patched_sha256": PATCHED_SHA,
+        "started_utc": started, "windows": platform.platform(),
+        "machine": platform.machine(), "python": platform.python_version(),
+        "input_bytes": input_file.stat().st_size,
+        "input_sha256": input_hash, "original_sha256": sha256(original),
+        "patched_sha256": sha256(patched),
         "patch_source": "external debugger export" if args.patched else "embedded patch bytes",
+        "patched_input": args.patched.name if args.patched else None,
         "tests": rows,
     }
     (lab / "results.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(result, indent=2), flush=True)
     require(all(row["pass"] for row in rows.values()), "At least one experiment check failed.")
+    if args.evidence_dir:
+        target = args.evidence_dir.resolve()
+        (target / "logs").mkdir(parents=True, exist_ok=True)
+        shutil.copy2(lab / "results.json", target / "results.json")
+        for log in sorted((lab / "logs").glob("*.txt")):
+            shutil.copy2(log, target / "logs" / log.name)
+        print(f"Copied results.json and logs/ to {target}", flush=True)
 
 
 if __name__ == "__main__":
