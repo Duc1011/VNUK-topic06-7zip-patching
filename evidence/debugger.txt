@@ -1,0 +1,24 @@
+x64dbg 2026.05.27 (Windows x64, headless)
+
+Patch assembly and export
+RVA=777C8 FILE=76BC8
+BEFORE mov byte ptr ds:[rcx+0x9A], dl
+AFTER mov dword ptr ds:[rcx+0x9A], edx | mov dword ptr ds:[rcx+0x28], 0x03
+READBACK 3
+[x64dbg-test] FINAL status=pass asserts=1
+
+original-default
+HANDLER RVA=783E9 LEVEL=FFFFFFFF
+[x64dbg-test] FINAL status=pass asserts=2
+
+patched-default
+HANDLER RVA=783E9 LEVEL=3
+[x64dbg-test] FINAL status=pass asserts=2
+
+patched-explicit5
+HANDLER RVA=783E9 LEVEL=5
+[x64dbg-test] FINAL status=pass asserts=2
+
+patched-explicit0
+HANDLER RVA=783E9 LEVEL=0
+[x64dbg-test] FINAL status=pass asserts=2

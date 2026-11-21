@@ -1,0 +1,15 @@
+log "RVA={x:mod.rva(mod.main()+777c8)} FILE={x:mod.offset(mod.main()+777c8)}"
+log "BEFORE {disasm@mod.main()+777c8}"
+asm mod.main()+777c8, "mov dword ptr [rcx+0x9A], edx"
+asm mod.main()+777ce, "mov dword ptr [rcx+0x28], 3"
+fill mod.main()+777d5, 90, B
+log "AFTER {disasm@mod.main()+777c8} | {disasm@mod.main()+777ce}"
+log "READBACK {x:ReadByte(mod.main()+777D1)}"
+testassert ReadByte(mod.main()+777D1)==3, "Default level immediate equals 3"
+savedata "EXPORT_PATH", mod.main()+777c8, 18
+
+
+
+
+
+
