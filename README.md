@@ -102,8 +102,8 @@ Use **x64dbg `2026.05.27`** (`release\x64\x64dbg.exe`).
 5. Press `Space` on `7za.exe:$777CE` and assemble:
    - `mov dword ptr [rcx+0x28], 3`
 6. Right-click `7za.exe:$777D5` → **Follow in Dump → Selected Address**, select the remaining
-   11 bytes (`91 9C 00 00 00 88 91 9D 00 00 00`) in **Dump 1**, and choose
-   **Binary → Fill with NOPs** (`0x90`). *(Do not use the `fill` console command before
+   11 bytes (`91 9C 00 00 00 88 91 9D 00 00 00`) in **Dump 1**, choose **Binary → Fill...**,
+   and enter the hex value `90`. *(Do not use the `fill` console command before
    `File → Patch file`, because `fill` writes memory without registering entries in x64dbg's
    Patch table.)*
 7. Jump back to `7za.exe:$777C8` (`disasm 7za.exe:$777C8`) and capture an **after** screenshot
