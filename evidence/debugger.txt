@@ -1,24 +1,41 @@
 x64dbg 2026.05.27 (Windows x64, headless)
+Release archive: snapshot_2026-05-27_12-11.zip
+Archive SHA-256: d41966dfc5b435a372798245300ca0ab7bb8e48bdbf48512c6fb20fcca427697
 
-Patch assembly and export
+=== 1. Patch assembly and export (-testing -cf x64dbg-apply.txt) ===
+Command: headless.exe -testing -cf x64dbg-apply.txt 7za.exe
 RVA=777C8 FILE=76BC8
 BEFORE mov byte ptr ds:[rcx+0x9A], dl
 AFTER mov dword ptr ds:[rcx+0x9A], edx | mov dword ptr ds:[rcx+0x28], 0x03
 READBACK 3
 [x64dbg-test] FINAL status=pass asserts=1
+Exported 24 bytes: 89 91 9A 00 00 00 C7 41 28 03 00 00 00 90 90 90 90 90 90 90 90 90 90 90
+Spliced EXE SHA-256: 985d511efd476fe87d7258e61abb3e99a03e7f63915203550bd28a46aae53b98
 
-original-default
+=== 2. Runtime handler level checks (-testing -cf + testassert via tools/Run-HandlerChecks.ps1) ===
+Breakpoint: mod.main()+783E9 (CALL 0x00463fb4; [rcx+0x28] = CMultiMethodProps level)
+
+original-default (7za.exe a -t7z -mmt=1 original-default.7z small.txt)
 HANDLER RVA=783E9 LEVEL=FFFFFFFF
 [x64dbg-test] FINAL status=pass asserts=2
 
-patched-default
+patched-default (7za-patched-gui.exe a -t7z -mmt=1 patched-default.7z small.txt)
 HANDLER RVA=783E9 LEVEL=3
 [x64dbg-test] FINAL status=pass asserts=2
 
-patched-explicit5
+patched-explicit5 (7za-patched-gui.exe a -t7z -mmt=1 -mx=5 patched-explicit5.7z small.txt)
 HANDLER RVA=783E9 LEVEL=5
 [x64dbg-test] FINAL status=pass asserts=2
 
-patched-explicit0
+patched-explicit0 (7za-patched-gui.exe a -t7z -mmt=1 -mx=0 patched-explicit0.7z small.txt)
 HANDLER RVA=783E9 LEVEL=0
 [x64dbg-test] FINAL status=pass asserts=2
+
+=== 3. x64dbg GUI interactive walkthrough (2026.05.27, x64dbg.exe) ===
+Status: VERIFIED on Windows 11 x64 desktop with x64dbg May 27 2026 (TitanEngine).
+- Disassembly before patch (RVA 0x777C8 / file offset 0x76BC8): evidence/x64dbg-before.jpg
+- Disassembly after in-place instruction replacement + 11 NOPs: evidence/x64dbg-after.jpg
+- Patches dialog (17/17 byte patches in 7za.exe): evidence/x64dbg-patches.png
+- Exported via File -> Patch file: 7za-patched-gui.exe (1,328,640 bytes)
+- Exported SHA-256: 985d511efd476fe87d7258e61abb3e99a03e7f63915203550bd28a46aae53b98
+- Verified byte-identical via verify_patch.py and tested across T01-T07 via reproduce.py --patched.

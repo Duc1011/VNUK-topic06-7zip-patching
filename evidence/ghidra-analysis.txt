@@ -1,0 +1,143 @@
+Tool: Ghidra 12.2 PUBLIC (build 2026-Oct-16 1220 UTC), analyzeHeadless + Topic06Ghidra.java
+Java: Eclipse Adoptium 25.0.5.1
+Program: x64/7za.exe
+Program SHA-256: dd3757f31c97e33776f2590317d4fb12f2da075db3dbb1e3f94d0f2a01d84ffa
+Language: x86:LE:64:default / windows
+Image base: 00400000
+Patch site: VA=004777c8 RVA=777C8 FILE=76BC8 length=24 bytes
+Original bytes at patch site: 88 91 9A 00 00 00 88 91 9B 00 00 00 88 91 9C 00 00 00 88 91 9D 00 00 00
+
+Function containing patch: FUN_004777a0 entry=004777a0 RVA=777A0 body=004777a0-00477837 size=152
+Signature: undefined FUN_004777a0(longlong param_1)
+
+=== Disassembly of FUN_004777a0 (>> marks the 24-byte patch window) ===
+   004777a0  RVA=777A0 FILE=76BA0  33 D2                    XOR EDX,EDX
+   004777a2  RVA=777A2 FILE=76BA2  C6 81 93 00 00 00 01     MOV byte ptr [RCX + 0x93],0x1
+   004777a9  RVA=777A9 FILE=76BA9  88 91 A7 00 00 00        MOV byte ptr [RCX + 0xa7],DL
+   004777af  RVA=777AF FILE=76BAF  88 91 94 00 00 00        MOV byte ptr [RCX + 0x94],DL
+   004777b5  RVA=777B5 FILE=76BB5  88 91 95 00 00 00        MOV byte ptr [RCX + 0x95],DL
+   004777bb  RVA=777BB FILE=76BBB  88 91 99 00 00 00        MOV byte ptr [RCX + 0x99],DL
+   004777c1  RVA=777C1 FILE=76BC1  C6 81 98 00 00 00 01     MOV byte ptr [RCX + 0x98],0x1
+>> 004777c8  RVA=777C8 FILE=76BC8  88 91 9A 00 00 00        MOV byte ptr [RCX + 0x9a],DL
+>> 004777ce  RVA=777CE FILE=76BCE  88 91 9B 00 00 00        MOV byte ptr [RCX + 0x9b],DL
+>> 004777d4  RVA=777D4 FILE=76BD4  88 91 9C 00 00 00        MOV byte ptr [RCX + 0x9c],DL
+>> 004777da  RVA=777DA FILE=76BDA  88 91 9D 00 00 00        MOV byte ptr [RCX + 0x9d],DL
+   004777e0  RVA=777E0 FILE=76BE0  C7 81 A0 00 00 00 FF FF FF FF MOV dword ptr [RCX + 0xa0],0xffffffff
+   004777ea  RVA=777EA FILE=76BEA  88 91 A4 00 00 00        MOV byte ptr [RCX + 0xa4],DL
+   004777f0  RVA=777F0 FILE=76BF0  88 91 A5 00 00 00        MOV byte ptr [RCX + 0xa5],DL
+   004777f6  RVA=777F6 FILE=76BF6  48 8D 42 FF              LEA RAX,[RDX + -0x1]
+   004777fa  RVA=777FA FILE=76BFA  C6 81 A6 00 00 00 01     MOV byte ptr [RCX + 0xa6],0x1
+   00477801  RVA=77801 FILE=76C01  88 91 91 00 00 00        MOV byte ptr [RCX + 0x91],DL
+   00477807  RVA=77807 FILE=76C07  88 91 90 00 00 00        MOV byte ptr [RCX + 0x90],DL
+   0047780d  RVA=7780D FILE=76C0D  88 91 92 00 00 00        MOV byte ptr [RCX + 0x92],DL
+   00477813  RVA=77813 FILE=76C13  C7 81 A8 00 00 00 FD 08 00 00 MOV dword ptr [RCX + 0xa8],0x8fd
+   0047781d  RVA=7781D FILE=76C1D  48 89 81 80 00 00 00     MOV qword ptr [RCX + 0x80],RAX
+   00477824  RVA=77824 FILE=76C24  48 89 81 88 00 00 00     MOV qword ptr [RCX + 0x88],RAX
+   0047782b  RVA=7782B FILE=76C2B  89 91 B8 00 00 00        MOV dword ptr [RCX + 0xb8],EDX
+   00477831  RVA=77831 FILE=76C31  89 91 C8 00 00 00        MOV dword ptr [RCX + 0xc8],EDX
+   00477837  RVA=77837 FILE=76C37  C3                       RET
+
+=== Callers of FUN_004777a0 ===
+UNCONDITIONAL_CALL 004777a0 from 00477016 (RVA=77016) in FUN_00476f94@00476f94
+   00476fe7  RVA=76FE7 FILE=763E7  88 83 A5 00 00 00        MOV byte ptr [RBX + 0xa5],AL
+   00476fed  RVA=76FED FILE=763ED  48 89 83 B0 00 00 00     MOV qword ptr [RBX + 0xb0],RAX
+   00476ff4  RVA=76FF4 FILE=763F4  89 83 B8 00 00 00        MOV dword ptr [RBX + 0xb8],EAX
+   00476ffa  RVA=76FFA FILE=763FA  89 83 BC 00 00 00        MOV dword ptr [RBX + 0xbc],EAX
+   00477000  RVA=77000 FILE=76400  48 89 83 C0 00 00 00     MOV qword ptr [RBX + 0xc0],RAX
+   00477007  RVA=77007 FILE=76407  89 83 C8 00 00 00        MOV dword ptr [RBX + 0xc8],EAX
+   0047700d  RVA=7700D FILE=7640D  89 83 CC 00 00 00        MOV dword ptr [RBX + 0xcc],EAX
+   00477013  RVA=77013 FILE=76413  48 8B CB                 MOV RCX,RBX
+>> 00477016  RVA=77016 FILE=76416  E8 85 07 00 00           CALL 0x004777a0
+   0047701b  RVA=7701B FILE=7641B  90                       NOP
+   0047701c  RVA=7701C FILE=7641C  48 8B C3                 MOV RAX,RBX
+
+UNCONDITIONAL_CALL 004777a0 from 0047a1be (RVA=7A1BE) in FUN_0047a184@0047a184
+   0047a1a0  RVA=7A1A0 FILE=795A0  4D 8B F8                 MOV R15,R8
+   0047a1a3  RVA=7A1A3 FILE=795A3  4C 8B F2                 MOV R14,RDX
+   0047a1a6  RVA=7A1A6 FILE=795A6  48 8B F9                 MOV RDI,RCX
+   0047a1a9  RVA=7A1A9 FILE=795A9  33 DB                    XOR EBX,EBX
+   0047a1ab  RVA=7A1AB FILE=795AB  89 99 D0 02 00 00        MOV dword ptr [RCX + 0x2d0],EBX
+   0047a1b1  RVA=7A1B1 FILE=795B1  48 83 C1 18              ADD RCX,0x18
+   0047a1b5  RVA=7A1B5 FILE=795B5  E8 1A A7 FE FF           CALL 0x004648d4
+   0047a1ba  RVA=7A1BA FILE=795BA  48 8D 4F 18              LEA RCX,[RDI + 0x18]
+>> 0047a1be  RVA=7A1BE FILE=795BE  E8 DD D5 FF FF           CALL 0x004777a0
+   0047a1c3  RVA=7A1C3 FILE=795C3  8B F3                    MOV ESI,EBX
+   0047a1c5  RVA=7A1C5 FILE=795C5  89 5C 24 24              MOV dword ptr [RSP + 0x24],EBX
+
+=== Decompiler output for FUN_004777a0 ===
+
+void FUN_004777a0(longlong param_1)
+
+{
+  *(undefined1 *)(param_1 + 0x93) = 1;
+  *(undefined1 *)(param_1 + 0xa7) = 0;
+  *(undefined1 *)(param_1 + 0x94) = 0;
+  *(undefined1 *)(param_1 + 0x95) = 0;
+  *(undefined1 *)(param_1 + 0x99) = 0;
+  *(undefined1 *)(param_1 + 0x98) = 1;
+  *(undefined1 *)(param_1 + 0x9a) = 0;
+  *(undefined1 *)(param_1 + 0x9b) = 0;
+  *(undefined1 *)(param_1 + 0x9c) = 0;
+  *(undefined1 *)(param_1 + 0x9d) = 0;
+  *(undefined4 *)(param_1 + 0xa0) = 0xffffffff;
+  *(undefined1 *)(param_1 + 0xa4) = 0;
+  *(undefined1 *)(param_1 + 0xa5) = 0;
+  *(undefined1 *)(param_1 + 0xa6) = 1;
+  *(undefined1 *)(param_1 + 0x91) = 0;
+  *(undefined1 *)(param_1 + 0x90) = 0;
+  *(undefined1 *)(param_1 + 0x92) = 0;
+  *(undefined4 *)(param_1 + 0xa8) = 0x8fd;
+  *(undefined8 *)(param_1 + 0x80) = 0xffffffffffffffff;
+  *(undefined8 *)(param_1 + 0x88) = 0xffffffffffffffff;
+  *(undefined4 *)(param_1 + 0xb8) = 0;
+  *(undefined4 *)(param_1 + 200) = 0;
+  return;
+}
+
+
+=== x64dbg handler breakpoint RVA 783E9 ===
+Function: FUN_0047829c entry=0047829c
+   004783d9  RVA=783D9 FILE=777D9  48 8B 44 24 28           MOV RAX,qword ptr [RSP + 0x28]
+   004783de  RVA=783DE FILE=777DE  4C 8B 2C 01              MOV R13,qword ptr [RCX + RAX*0x1]
+   004783e2  RVA=783E2 FILE=777E2  49 8B D5                 MOV RDX,R13
+   004783e5  RVA=783E5 FILE=777E5  48 8D 4F 28              LEA RCX,[RDI + 0x28]
+>> 004783e9  RVA=783E9 FILE=777E9  E8 C6 BB FE FF           CALL 0x00463fb4
+   004783ee  RVA=783EE FILE=777EE  BA 0D 00 00 00           MOV EDX,0xd
+   004783f3  RVA=783F3 FILE=777F3  49 8B CD                 MOV RCX,R13
+   004783f6  RVA=783F6 FILE=777F6  E8 ED B3 F9 FF           CALL 0x004137e8
+   004783fb  RVA=783FB FILE=777FB  85 C0                    TEST EAX,EAX
+   004783fd  RVA=783FD FILE=777FD  78 16                    JS 0x00478415
+   004783ff  RVA=783FF FILE=777FF  8B C8                    MOV ECX,EAX
+   00478401  RVA=78401 FILE=77801  49 8B 45 00              MOV RAX,qword ptr [R13]
+   00478405  RVA=78405 FILE=77805  48 8B 14 C8              MOV RDX,qword ptr [RAX + RCX*0x8]
+   00478409  RVA=78409 FILE=77809  66 83 7A 08 13           CMP word ptr [RDX + 0x8],0x13
+   0047840e  RVA=7840E FILE=7780E  75 05                    JNZ 0x00478415
+   00478410  RVA=78410 FILE=77810  8B 42 10                 MOV EAX,dword ptr [RDX + 0x10]
+   00478413  RVA=78413 FILE=77813  EB 05                    JMP 0x0047841a
+   00478415  RVA=78415 FILE=77815  B8 FF FF FF FF           MOV EAX,0xffffffff
+
+=== Cross-check against GNU objdump 2.44 (MinGW-W64 x86_64) ===
+Command: objdump -d -M intel --start-address=0x4777a0 --stop-address=0x477838 x64\7za.exe
+Result: Every instruction, virtual address (0x4777a0..0x477837), and machine-code byte
+matches Ghidra 12.2 PUBLIC exactly.
+
+Original (x64\7za.exe, SHA-256 dd3757f31c97e33776f2590317d4fb12f2da075db3dbb1e3f94d0f2a01d84ffa):
+  4777c8:	88 91 9a 00 00 00    	mov    BYTE PTR [rcx+0x9a],dl
+  4777ce:	88 91 9b 00 00 00    	mov    BYTE PTR [rcx+0x9b],dl
+  4777d4:	88 91 9c 00 00 00    	mov    BYTE PTR [rcx+0x9c],dl
+  4777da:	88 91 9d 00 00 00    	mov    BYTE PTR [rcx+0x9d],dl
+
+Patched (7za-patched-gui.exe, SHA-256 985d511efd476fe87d7258e61abb3e99a03e7f63915203550bd28a46aae53b98):
+  4777c8:	89 91 9a 00 00 00    	mov    DWORD PTR [rcx+0x9a],edx
+  4777ce:	c7 41 28 03 00 00 00 	mov    DWORD PTR [rcx+0x28],0x3
+  4777d5:	90                   	nop
+  4777d6:	90                   	nop
+  4777d7:	90                   	nop
+  4777d8:	90                   	nop
+  4777d9:	90                   	nop
+  4777da:	90                   	nop
+  4777db:	90                   	nop
+  4777dc:	90                   	nop
+  4777dd:	90                   	nop
+  4777de:	90                   	nop
+  4777df:	90                   	nop

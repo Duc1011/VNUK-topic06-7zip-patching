@@ -1,0 +1,8 @@
+bp mod.main()+783E9
+next:
+run
+cmp mod.rva(cip), 783E9
+jne next
+log "HANDLER RVA={x:mod.rva(cip)} LEVEL={x:ReadDword(rcx+28)}"
+testassert mod.rva(cip)==783E9, "Stopped at the 7z handler property loop (RVA 783E9)"
+testassert ReadDword(rcx+28)==EXPECTED_LEVEL, "CMultiMethodProps level [rcx+0x28] equals EXPECTED_LEVEL"
