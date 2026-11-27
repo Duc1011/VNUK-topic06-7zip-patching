@@ -1,0 +1,5 @@
+C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -File C:\Users\ADMIN\Downloads\Programs\malware_project\Compress-Topic06.ps1 -Source "C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-tests-knsve1nx\@ Bản ghi 64 MiB.txt" -Output "C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-tests-knsve1nx\Kết quả nén\Existing.7z" -BinaryDirectory C:\Users\ADMIN\Downloads\Programs\malware_project\bin
+Exit code: 1
+Elapsed seconds: 0.3443
+
+Error: Output already exists: C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-tests-knsve1nx\Kết quả nén\Existing.7z

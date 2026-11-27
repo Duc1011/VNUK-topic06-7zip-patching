@@ -1,0 +1,5 @@
+dd3757f31c97e33776f2590317d4fb12f2da075db3dbb1e3f94d0f2a01d84ffa  C:\Users\ADMIN\Downloads\Programs\malware_project\bin\7za.exe
+1cb1b0b4546dc11598a2ea3a22a639e475c2d33b8f7b8a94e304a3a18faa6b19  C:\Users\ADMIN\Downloads\Programs\malware_project\bin\7za-ppmd.exe
+39d2187b942cc88818dd959e53c6b7dddd152097a42061467c4d56050168d646  C:\Users\ADMIN\Downloads\Programs\malware_project\bin\License.txt
+Package SHA-256: 396c180f12d2247c24b0b1fcd482c6fc2a2700f61211ffede1061dd971f5e104
+Patch source: verified x64dbg export

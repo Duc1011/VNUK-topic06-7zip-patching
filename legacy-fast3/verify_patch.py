@@ -15,12 +15,11 @@ Example:
     python verify_patch.py --original x64\\7za.exe --write-1337 7za-1337.exe
 """
 import argparse
-import hashlib
 from pathlib import Path
-import struct
 import sys
 
 import reproduce
+from topic06_common import pe_layout, rva_to_offset, sha256_bytes
 
 PATCH_RVA = 0x777C8
 PATCH_LEN = len(reproduce.BEFORE)
@@ -38,38 +37,6 @@ AFTER_ASM = [
     (0x00, "89 91 9A 00 00 00", "mov dword ptr [rcx+0x9A], edx   ; edx == 0 (xor edx,edx at RVA 777A0)"),
     (0x06, "C7 41 28 03 00 00 00", "mov dword ptr [rcx+0x28], 3     ; default level = 3 (Fast)"),
 ] + [(0x0D + i, "90", "nop") for i in range(11)]
-
-
-def sha256_bytes(data):
-    return hashlib.sha256(data).hexdigest()
-
-
-def pe_layout(binary):
-    """Return (image_base, [(name, va, vsize, raw_ptr, raw_size), ...])."""
-    pe = struct.unpack_from("<I", binary, 0x3C)[0]
-    if binary[pe:pe + 4] != b"PE\0\0":
-        raise RuntimeError("Not a PE file.")
-    sections = struct.unpack_from("<H", binary, pe + 6)[0]
-    opt_size = struct.unpack_from("<H", binary, pe + 20)[0]
-    opt = pe + 24
-    if struct.unpack_from("<H", binary, opt)[0] != 0x20B:
-        raise RuntimeError("Expected a PE32+ (x64) image.")
-    image_base = struct.unpack_from("<Q", binary, opt + 24)[0]
-    table = opt + opt_size
-    result = []
-    for i in range(sections):
-        entry = table + 40 * i
-        name = binary[entry:entry + 8].rstrip(b"\0").decode("ascii", "replace")
-        vsize, va, raw_size, raw_ptr = struct.unpack_from("<IIII", binary, entry + 8)
-        result.append((name, va, vsize, raw_ptr, raw_size))
-    return image_base, result
-
-
-def rva_to_offset(layout, rva):
-    for name, va, vsize, raw_ptr, raw_size in layout:
-        if va <= rva < va + max(vsize, raw_size):
-            return raw_ptr + (rva - va), name
-    raise RuntimeError(f"RVA {rva:#x} is not inside any section.")
 
 
 def parse_1337(path):

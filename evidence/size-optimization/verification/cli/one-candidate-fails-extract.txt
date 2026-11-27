@@ -1,0 +1,26 @@
+C:\Users\ADMIN\Downloads\Programs\malware_project\bin\7za.exe x -sccUTF-8 -oC:\Users\ADMIN\Downloads\Programs\malware_project\topic06-tests-knsve1nx\restore-9v78efzc -- "C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-tests-knsve1nx\Tài liệu dự án\Sau lỗi.7z"
+Exit code: 0
+Elapsed seconds: 0.7652
+
+
+7-Zip (a) 26.06 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-11-06
+
+Scanning the drive for archives:
+1 file, 396450 bytes (388 KiB)
+
+Extracting archive: C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-tests-knsve1nx\Tài liệu dự án\Sau lỗi.7z
+--
+Path = C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-tests-knsve1nx\Tài liệu dự án\Sau lỗi.7z
+Type = 7z
+Physical Size = 396450
+Headers Size = 461
+Method = PPMD
+Solid = +
+Blocks = 1
+
+Everything is Ok
+
+Folders: 4
+Files: 24
+Size:       6688313
+Compressed: 396450

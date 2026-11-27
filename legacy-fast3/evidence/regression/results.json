@@ -1,0 +1,74 @@
+{
+  "started_utc": "2026-11-27T04:03:41+00:00",
+  "windows": "Windows-11-10.0.26200-SP0",
+  "machine": "AMD64",
+  "python": "3.14.10",
+  "input_bytes": 67108864,
+  "input_sha256": "a5cfb3581a8ac9d67cb26ae3b3140fe09bb7ec80338a7b6e97fe5d67d004866c",
+  "original_sha256": "dd3757f31c97e33776f2590317d4fb12f2da075db3dbb1e3f94d0f2a01d84ffa",
+  "patched_sha256": "985d511efd476fe87d7258e61abb3e99a03e7f63915203550bd28a46aae53b98",
+  "patch_source": "external debugger export",
+  "patched_input": "7za-patched.exe",
+  "tests": {
+    "T01": {
+      "executable": "7za.exe",
+      "option": null,
+      "exit_code": 0,
+      "method": "LZMA2:25",
+      "archive_bytes": 3290062,
+      "archive_sha256": "092ef02de1b6fac3b130ccb656617ba913f7d75ec1b3512ce5e08593268ed0fa",
+      "pass": true
+    },
+    "T02": {
+      "executable": "7za.exe",
+      "option": "-mx=3",
+      "exit_code": 0,
+      "method": "LZMA2:22",
+      "archive_bytes": 3578912,
+      "archive_sha256": "c2222f6423a0a04c42f91b03b3dc35281ecc2ab1c20b1e63d6b51542f71929d1",
+      "pass": true
+    },
+    "T03": {
+      "executable": "7za.exe",
+      "option": "-mx=5",
+      "exit_code": 0,
+      "method": "LZMA2:25",
+      "archive_bytes": 3290062,
+      "archive_sha256": "092ef02de1b6fac3b130ccb656617ba913f7d75ec1b3512ce5e08593268ed0fa",
+      "pass": true
+    },
+    "T04": {
+      "executable": "7za-patched.exe",
+      "option": null,
+      "exit_code": 0,
+      "method": "LZMA2:22",
+      "archive_bytes": 3578912,
+      "archive_sha256": "c2222f6423a0a04c42f91b03b3dc35281ecc2ab1c20b1e63d6b51542f71929d1",
+      "pass": true
+    },
+    "T05": {
+      "executable": "7za-patched.exe",
+      "option": "-mx=5",
+      "exit_code": 0,
+      "method": "LZMA2:25",
+      "archive_bytes": 3290062,
+      "archive_sha256": "092ef02de1b6fac3b130ccb656617ba913f7d75ec1b3512ce5e08593268ed0fa",
+      "pass": true
+    },
+    "T06": {
+      "executable": "7za-patched.exe",
+      "option": "-mx=0",
+      "exit_code": 0,
+      "method": "Copy",
+      "archive_bytes": 67108986,
+      "archive_sha256": "17310ffffb4b66ebab2f191be97ed163c2907ef9c1873746ff4fe5c9a94bbe78",
+      "pass": true
+    },
+    "T07": {
+      "test_exit_code": 0,
+      "extract_exit_code": 0,
+      "extracted_sha256": "a5cfb3581a8ac9d67cb26ae3b3140fe09bb7ec80338a7b6e97fe5d67d004866c",
+      "pass": true
+    }
+  }
+}

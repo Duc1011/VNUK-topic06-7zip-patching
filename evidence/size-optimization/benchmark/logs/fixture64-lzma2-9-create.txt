@@ -1,0 +1,18 @@
+C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-bench-idon060o\x64\7za.exe a -sccUTF-8 -t7z -mmt=1 -m0=LZMA2 -mx=9 -- C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-bench-idon060o\candidate.7z input.txt
+Exit code: 0
+Elapsed seconds: 47.6442
+
+
+7-Zip (a) 26.06 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-11-06
+
+Scanning the drive:
+1 file, 67108864 bytes (64 MiB)
+
+Creating archive: C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-bench-idon060o\candidate.7z
+
+Add new data to archive: 1 file, 67108864 bytes (64 MiB)
+
+
+Files read from disk: 1
+Archive size: 3897111 bytes (3806 KiB)
+Everything is Ok

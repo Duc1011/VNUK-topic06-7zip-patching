@@ -2,64 +2,26 @@
 import argparse
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
-import hashlib
 import json
 import os
 from pathlib import Path
 import platform
-import random
 import re
 import shutil
 import subprocess
+import sys
 import tempfile
-from urllib.request import urlopen
 
-RELEASE = "https://github.com/ip7z/7zip/releases/download/26.06/7z2606-extra.7z"
-PACKAGE_SHA = "396c180f12d2247c24b0b1fcd482c6fc2a2700f61211ffede1061dd971f5e104"
-ORIGINAL_SHA = "dd3757f31c97e33776f2590317d4fb12f2da075db3dbb1e3f94d0f2a01d84ffa"
+HERE = Path(__file__).resolve().parent
+# Allow direct execution from this folder with the shared release helpers at the repo root.
+sys.path.insert(0, str(HERE.parent))
+from topic06_common import ORIGINAL_SHA, generate_input, obtain_original, require, sha256
+
+
 PATCHED_SHA = "985d511efd476fe87d7258e61abb3e99a03e7f63915203550bd28a46aae53b98"
 OFFSET = 0x76BC8
 BEFORE = bytes.fromhex("88 91 9A 00 00 00 88 91 9B 00 00 00 88 91 9C 00 00 00 88 91 9D 00 00 00")
 AFTER = bytes.fromhex("89 91 9A 00 00 00 C7 41 28 03 00 00 00") + b"\x90" * 11
-
-
-def require(condition, message):
-    if not condition:
-        raise RuntimeError(message)
-
-
-def sha256(path):
-    with path.open("rb") as stream:
-        return hashlib.file_digest(stream, "sha256").hexdigest()
-
-
-def obtain_original(lab, package_path):
-    if package_path:
-        package = package_path
-    else:
-        package = lab / "7z2606-extra.7z"
-        with urlopen(RELEASE, timeout=30) as source:
-            package.write_bytes(source.read())
-    require(sha256(package) == PACKAGE_SHA, "Unexpected Extra package SHA-256.")
-    # Windows inbox bsdtar supports 7z containers. Extract just the named member.
-    subprocess.run(["tar", "-xf", str(package), "x64/7za.exe"], cwd=lab, check=True)
-    return lab / "x64" / "7za.exe"
-
-
-def generate_input(path):
-    rng = random.Random(2606)
-    records = [
-        (f"VNUK record {i:05d} region={rng.randrange(64):02d} "
-         f"category={rng.randrange(15):02d} value={rng.randrange(1000000):06d}\r\n").encode("ascii")
-        for i in range(10_000)
-    ]
-    remaining = 64 * 1024**2
-    with path.open("wb") as stream:
-        while remaining:
-            block = b"".join(rng.choices(records, k=250))[:remaining]
-            stream.write(block)
-            remaining -= len(block)
-    os.utime(path, (1700000000, 1700000000))
 
 
 def execute(lab, log_name, exe, *args):
@@ -96,7 +58,7 @@ def main():
     parser.add_argument("--original", type=Path, help="Use a verified 26.06 x64 7za.exe.")
     parser.add_argument("--package", type=Path, help="Use a local 7z2606-extra.7z package.")
     parser.add_argument("--patched", type=Path, help="Test a prebuilt copy exported by x64dbg.")
-    parser.add_argument("--work-root", type=Path, default=Path.cwd())
+    parser.add_argument("--work-root", type=Path, default=HERE)
     parser.add_argument("--jobs", type=int, default=1, choices=range(1, 7))
     parser.add_argument("--evidence-dir", type=Path,
                         help="Copy results.json and logs/ here after a successful run (e.g. evidence).")

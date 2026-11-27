@@ -1,0 +1,18 @@
+C:\Users\ADMIN\Downloads\Programs\malware_project\bin\7za-ppmd.exe a -sccUTF-8 -t7z -mmt=1 -mx=9 -- C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-tests-knsve1nx\candidate.7z "Tài liệu dự án"
+Exit code: 0
+Elapsed seconds: 0.7077
+
+
+7-Zip (a) 26.06 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-11-06
+
+Scanning the drive:
+4 folders, 24 files, 6688313 bytes (6532 KiB)
+
+Creating archive: C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-tests-knsve1nx\candidate.7z
+
+Add new data to archive: 4 folders, 24 files, 6688313 bytes (6532 KiB)
+
+
+Files read from disk: 24
+Archive size: 396442 bytes (388 KiB)
+Everything is Ok

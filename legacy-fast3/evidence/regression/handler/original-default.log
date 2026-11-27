@@ -1,0 +1,224 @@
+Initializing wait objects...
+Initializing debugger...
+Initializing debugger functions...
+Setting JSON memory management functions...
+Getting directory information...
+[headless] entering command loop...
+[STATE] initialized
+[TODO] Not implemented GUI_PROCESS_EVENTS (91)
+[SYMBOL] [DIA] Skipping non-existent PDB: .\symbols\ntdll.pdb\44294CBD55E8CD67B3D56B689F03152D1\ntdll.pdb
+Symbol Path: C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-size-research\release\x64\headless\symbols
+Start file read thread...
+Retrieving syscall indices...
+Syscall indices loaded!
+Failed to load error codes...
+Failed to load exception codes...
+Failed to load NTSTATUS codes...
+Failed to load Windows constants...
+Reading notes file...
+File read thread finished!
+Allocating message stack...
+Initializing global script variables...
+Registering debugger commands...
+Registering GUI command handler...
+Registering expression functions...
+Registering format functions...
+Registering Script DLL command handler...
+Starting command loop...
+Initialization successful!
+Testing mode enabled, skipping default plugin autoload...
+Handling command line...
+  "C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-size-research\release\x64\headless.exe" -testing -workingDir "C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-size-research\fast3-handler" -cf "C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-size-research\fast3-handler\original-default.txt" "C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-un3b3_rh\x64\7za.exe" -- a -t7z -mmt=1 original-default.7z small.txt
+Debugging: C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-un3b3_rh\x64\7za.exe
+Database file: C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-size-research\release\x64\headless\db\7za.exe.dd64
+Process Started: 0000000000C20000 C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-un3b3_rh\x64\7za.exe
+  "C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-un3b3_rh\x64\7za.exe" "a" "-t7z" "-mmt=1" "original-default.7z" "small.txt" 
+  argv[0]: C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-un3b3_rh\x64\7za.exe
+  argv[1]: a
+  argv[2]: -t7z
+  argv[3]: -mmt=1
+  argv[4]: original-default.7z
+  argv[5]: small.txt
+Module 7za.exe loaded from disk path
+Breakpoint at 0000000000D089B0 (entry breakpoint) set!
+[TODO] Not implemented GUI_PROCESS_EVENTS (91)
+[SYMBOL] No symbols loaded for: ntdll.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\ntdll.pdb
+[SYMBOL] No symbols loaded for: ntdll.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\ntdll.pdb
+[SYMBOL] No symbols loaded for: ntdll.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: .\symbols\kernel32.pdb\E7D59A8480CEC3B15C62A36AD505637E1\kernel32.pdb
+[SYMBOL] No symbols loaded for: kernel32.dll
+DLL Loaded: 00007FF9485F0000 C:\Windows\System32\ntdll.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\kernel32.pdb
+[TODO] Not implemented GUI_PROCESS_EVENTS (91)
+[SYMBOL] No symbols loaded for: kernel32.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\kernel32.pdb
+[SYMBOL] No symbols loaded for: kernel32.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: .\symbols\kernelbase.pdb\4957D45FC8F739B95DE0ABE1EAE2BC1C1\kernelbase.pdb
+[SYMBOL] No symbols loaded for: kernelbase.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\kernelbase.pdb
+DLL Loaded: 00007FF946880000 C:\Windows\System32\kernel32.dll
+[SYMBOL] No symbols loaded for: kernelbase.dll
+[TODO] Not implemented GUI_PROCESS_EVENTS (91)
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\kernelbase.pdb
+[SYMBOL] No symbols loaded for: kernelbase.dll
+DLL Loaded: 00007FF945A50000 C:\Windows\System32\KernelBase.dll
+[TODO] Not implemented GUI_PROCESS_EVENTS (91)
+[TODO] Not implemented GUI_PROCESS_EVENTS (91)
+[TODO] Not implemented GUI_PROCESS_EVENTS (91)
+[TODO] Not implemented GUI_PROCESS_EVENTS (91)
+[TODO] Not implemented GUI_PROCESS_EVENTS (91)
+[TODO] Not implemented GUI_PROCESS_EVENTS (91)
+[SYMBOL] [DIA] Skipping non-existent PDB: .\symbols\oleaut32.pdb\60417C3EE386C45C0576FE3F5A8422991\oleaut32.pdb
+[SYMBOL] No symbols loaded for: oleaut32.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\oleaut32.pdb
+[SYMBOL] No symbols loaded for: oleaut32.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\oleaut32.pdb
+[SYMBOL] No symbols loaded for: oleaut32.dll
+DLL Loaded: 00007FF946960000 C:\Windows\System32\oleaut32.dll
+[TODO] Not implemented GUI_PROCESS_EVENTS (91)
+[SYMBOL] [DIA] Skipping non-existent PDB: .\symbols\msvcp_win.pdb\E690ABC4E4A0A67042936D5CB65C760C1\msvcp_win.pdb
+[SYMBOL] No symbols loaded for: msvcp_win.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\msvcp_win.pdb
+[SYMBOL] No symbols loaded for: msvcp_win.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\msvcp_win.pdb
+[SYMBOL] No symbols loaded for: msvcp_win.dll
+DLL Loaded: 00007FF945FE0000 C:\Windows\System32\msvcp_win.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: .\symbols\ucrtbase.pdb\66A3E8DFB8B886146544529E6A6DD4F41\ucrtbase.pdb
+[TODO] Not implemented GUI_PROCESS_EVENTS (91)
+[SYMBOL] No symbols loaded for: ucrtbase.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\ucrtbase.pdb
+[SYMBOL] No symbols loaded for: ucrtbase.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\ucrtbase.pdb
+[SYMBOL] No symbols loaded for: ucrtbase.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: .\symbols\combase.pdb\F4CDE3B963B0A1B415267C4BCD8A989A1\combase.pdb
+[SYMBOL] No symbols loaded for: combase.dll
+DLL Loaded: 00007FF9458C0000 C:\Windows\System32\ucrtbase.dll
+Thread 14476 created, Entry: ntdll.00007FF948614990, Parameter: 0000028F823BAAF0
+Thread 18100 created, Entry: ntdll.00007FF948614990, Parameter: 0000028F823BAAF0
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\combase.pdb
+[TODO] Not implemented GUI_PROCESS_EVENTS (91)
+[SYMBOL] No symbols loaded for: combase.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\combase.pdb
+[SYMBOL] No symbols loaded for: combase.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: .\symbols\rpcrt4.pdb\E9DD14015C33891F220822884DBE17FA1\rpcrt4.pdb
+[SYMBOL] No symbols loaded for: rpcrt4.dll
+DLL Loaded: 00007FF947810000 C:\Windows\System32\combase.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\rpcrt4.pdb
+[TODO] Not implemented GUI_PROCESS_EVENTS (91)
+[SYMBOL] No symbols loaded for: rpcrt4.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\rpcrt4.pdb
+[SYMBOL] No symbols loaded for: rpcrt4.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: .\symbols\user32.pdb\8AA9427308F6A365E0A10363D99DF8151\user32.pdb
+[SYMBOL] No symbols loaded for: user32.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\user32.pdb
+DLL Loaded: 00007FF9466F0000 C:\Windows\System32\rpcrt4.dll
+Thread 35304 created, Entry: ntdll.00007FF948614990, Parameter: 0000028F823BAAF0
+[SYMBOL] No symbols loaded for: user32.dll
+[TODO] Not implemented GUI_PROCESS_EVENTS (91)
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\user32.pdb
+[SYMBOL] No symbols loaded for: user32.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: .\symbols\win32u.pdb\6BB731435D65BDE0EFB4D135F5BEBBF11\win32u.pdb
+[SYMBOL] No symbols loaded for: win32u.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\win32u.pdb
+[SYMBOL] No symbols loaded for: win32u.dll
+DLL Loaded: 00007FF947BD0000 C:\Windows\System32\user32.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\win32u.pdb
+[TODO] Not implemented GUI_PROCESS_EVENTS (91)
+[SYMBOL] No symbols loaded for: win32u.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: .\symbols\gdi32.pdb\92C6EC2ABE478836C99BC83C2F3AE3551\gdi32.pdb
+[SYMBOL] No symbols loaded for: gdi32.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\gdi32.pdb
+[SYMBOL] No symbols loaded for: gdi32.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\gdi32.pdb
+DLL Loaded: 00007FF945A20000 C:\Windows\System32\win32u.dll
+[SYMBOL] No symbols loaded for: gdi32.dll
+[TODO] Not implemented GUI_PROCESS_EVENTS (91)
+[SYMBOL] [DIA] Skipping non-existent PDB: .\symbols\gdi32full.pdb\16AA0F4FB68827D59A6EA797CEA35D4C1\gdi32full.pdb
+[SYMBOL] No symbols loaded for: gdi32full.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\gdi32full.pdb
+[SYMBOL] No symbols loaded for: gdi32full.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\gdi32full.pdb
+DLL Loaded: 00007FF948530000 C:\Windows\System32\gdi32.dll
+[SYMBOL] No symbols loaded for: gdi32full.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: .\symbols\advapi32.pdb\A36693ABD3A3B7ECE7365FD5A9FF531B1\advapi32.pdb
+[TODO] Not implemented GUI_PROCESS_EVENTS (91)
+[SYMBOL] No symbols loaded for: advapi32.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\advapi32.pdb
+[SYMBOL] No symbols loaded for: advapi32.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\advapi32.pdb
+[SYMBOL] No symbols loaded for: advapi32.dll
+DLL Loaded: 00007FF945790000 C:\Windows\System32\gdi32full.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: .\symbols\msvcrt.pdb\FC0417B8DF754857A6826A24039CC49D1\msvcrt.pdb
+[SYMBOL] No symbols loaded for: msvcrt.dll
+[TODO] Not implemented GUI_PROCESS_EVENTS (91)
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\msvcrt.pdb
+[SYMBOL] No symbols loaded for: msvcrt.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\msvcrt.pdb
+[SYMBOL] No symbols loaded for: msvcrt.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: .\symbols\sechost.pdb\FA3AB214FE0194CDBF6785D4A73C17381\sechost.pdb
+DLL Loaded: 00007FF947470000 C:\Windows\System32\advapi32.dll
+DLL Loaded: 00007FF947760000 C:\Windows\System32\msvcrt.dll
+[SYMBOL] No symbols loaded for: sechost.dll
+[TODO] Not implemented GUI_PROCESS_EVENTS (91)
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\sechost.pdb
+[SYMBOL] No symbols loaded for: sechost.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\sechost.pdb
+[SYMBOL] No symbols loaded for: sechost.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: .\symbols\cryptbase.pdb\8249239758EE8E6AE16225F146AAE62C1\cryptbase.pdb
+DLL Loaded: 00007FF948480000 C:\Windows\System32\sechost.dll
+[SYMBOL] No symbols loaded for: cryptbase.dll
+[TODO] Not implemented GUI_PROCESS_EVENTS (91)
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\cryptbase.pdb
+[SYMBOL] No symbols loaded for: cryptbase.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\cryptbase.pdb
+[SYMBOL] No symbols loaded for: cryptbase.dll
+[STATE] running
+[STATE] running
+[STATE] paused
+[TODO] Not implemented GUI_SCRIPT_CLEAR (11)
+[TODO] Not implemented GUI_SCRIPT_ENABLEHIGHLIGHTING (49)
+DLL Loaded: 00007FF944D00000 C:\Windows\System32\cryptbase.dll
+System breakpoint reached!
+[TODO] Not implemented GUI_SCRIPT_ADD (10)
+[STATE] running
+[SYMBOL] [DIA] Skipping non-existent PDB: .\symbols\imm32.pdb\9948D719A6F5F6AFA591212BD2AFF7461\imm32.pdb
+[SYMBOL] No symbols loaded for: imm32.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\imm32.pdb
+[TODO] Not implemented GUI_PROCESS_EVENTS (91)
+[SYMBOL] No symbols loaded for: imm32.dll
+[SYMBOL] [DIA] Skipping non-existent PDB: C:\Windows\System32\imm32.pdb
+[SYMBOL] No symbols loaded for: imm32.dll
+Breakpoint at 0000000000C983E9 set!
+[TODO] Not implemented GUI_PROCESS_EVENTS (91)
+[STATE] paused
+[STATE] running
+[TODO] Not implemented GUI_PROCESS_EVENTS (91)
+[TODO] Not implemented GUI_PROCESS_EVENTS (91)
+[STATE] paused
+[TODO] Not implemented GUI_SCRIPT_SETINFOLINE (15)
+[TODO] Not implemented GUI_SCRIPT_CLEAR (11)
+DLL Loaded: 00007FF946560000 C:\Windows\System32\imm32.dll
+INT3 breakpoint "entry breakpoint" at <7za.OptionalHeader.AddressOfEntryPoint> (0000000000D089B0)!
+INT3 breakpoint at 7za.0000000000C983E9!
+HANDLER RVA=783E9 LEVEL=FFFFFFFF
+Script finished!
+[headless] shutdown requested by Ctrl+C
+[STATE] paused
+[x64dbg-test] FINAL status=pass asserts=2
+Stopping command thread...
+Stopping running debuggee...
+[STATE] stopped
+Thread 35304 exit
+Thread 14476 exit
+Thread 18100 exit
+Process stopped with exit code 0x0 (0)
+Saving database to C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-size-research\release\x64\headless\db\7za.exe.dd64 16ms
+Debugging stopped!
+Aborting scripts...
+Unloading plugins...
+Cleaning up allocated data...
+Cleaning up wait objects...
+Cleaning up debugger threads...
+Savi
