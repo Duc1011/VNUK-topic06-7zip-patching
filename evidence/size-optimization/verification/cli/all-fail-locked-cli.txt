@@ -1,0 +1,61 @@
+C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -File C:\Users\ADMIN\Downloads\Programs\malware_project\Compress-Topic06.ps1 -Source C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-tests-knsve1nx\Locked.txt -Output "C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-tests-knsve1nx\Kết quả nén\Locked.7z" -BinaryDirectory C:\Users\ADMIN\Downloads\Programs\malware_project\bin
+Exit code: 1
+Elapsed seconds: 0.7558
+
+Trying Original default...
+WARNING: Original default: Files read from disk: 0
+
+Archive size: 59 bytes (1 KiB)
+
+
+
+WARNINGS for files:
+
+
+
+.\Locked.txt : The process cannot access the file because it is being used by another process.
+
+----------------
+
+WARNING: Cannot open 1 file
+Trying Patched default...
+WARNING: Patched default: Files read from disk: 0
+
+Archive size: 69 bytes (1 KiB)
+
+
+
+WARNINGS for files:
+
+
+
+.\Locked.txt : The process cannot access the file because it is being used by another process.
+
+----------------
+
+WARNING: Cannot open 1 file
+Trying PPMd Ultra...
+WARNING: PPMd Ultra: Files read from disk: 0
+
+Archive size: 69 bytes (1 KiB)
+
+
+
+WARNINGS for files:
+
+
+
+.\Locked.txt : The process cannot access the file because it is being used by another process.
+
+----------------
+
+WARNING: Cannot open 1 file
+
+Candidate        Method Bytes Check            
+---------        ------ ----- -----            
+Original default -            Create failed (1)
+Patched default  -            Create failed (1)
+PPMd Ultra       -            Create failed (1)
+
+
+Error: No valid archive. All candidates failed compression or verification.

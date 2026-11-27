@@ -1,0 +1,11 @@
+log "RVA={x:mod.rva(mod.main()+78339)} FILE={x:mod.offset(mod.main()+78339)}"
+log "BEFORE {disasm@mod.main()+78339} | {disasm@mod.main()+7833C} | {disasm@mod.main()+7833F}"
+asm mod.main()+78339, "lea r13, [rip+0x84EA0]"
+asm mod.main()+78340, "nop"
+asm mod.main()+78341, "nop"
+log "AFTER {disasm@mod.main()+78339} | {disasm@mod.main()+78340} | {disasm@mod.main()+78341}"
+testassert ReadDword(mod.main()+78339)==A02D8D4C, "Expected LEA opcode and first displacement byte"
+testassert ReadDword(mod.main()+7833D)==9000084E, "Expected PPMD displacement and first NOP"
+testassert ReadByte(mod.main()+78341)==90, "Expected second NOP"
+testassert ReadDword(mod.main()+FD1E0)==444D5050, "Target is the PPMD codec name"
+savedata "EXPORT_PATH", mod.main()+78339, 9

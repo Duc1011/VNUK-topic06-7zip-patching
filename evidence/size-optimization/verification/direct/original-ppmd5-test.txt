@@ -1,0 +1,26 @@
+C:\Users\ADMIN\Downloads\Programs\malware_project\bin\7za.exe t -sccUTF-8 C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-tests-knsve1nx\candidate.7z
+Exit code: 0
+Elapsed seconds: 0.1238
+
+
+7-Zip (a) 26.06 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-11-06
+
+Scanning the drive for archives:
+1 file, 351369 bytes (344 KiB)
+
+Testing archive: C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-tests-knsve1nx\candidate.7z
+--
+Path = C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-tests-knsve1nx\candidate.7z
+Type = 7z
+Physical Size = 351369
+Headers Size = 453
+Method = PPMD
+Solid = +
+Blocks = 1
+
+Everything is Ok
+
+Folders: 4
+Files: 24
+Size:       6688313
+Compressed: 351369

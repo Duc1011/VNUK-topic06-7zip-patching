@@ -1,0 +1,18 @@
+C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -File C:\Users\ADMIN\Downloads\Programs\malware_project\Compress-Topic06.ps1 -Source "C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-tests-knsve1nx\@ Bản ghi 64 MiB.txt" -Output "C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-tests-knsve1nx\Kết quả nén\Tệp lớn.7z" -BinaryDirectory C:\Users\ADMIN\Downloads\Programs\malware_project\bin
+Exit code: 0
+Elapsed seconds: 40.9256
+
+Trying Original default...
+Trying Patched default...
+Trying PPMd Ultra...
+
+Candidate        Method     Bytes Check
+---------        ------     ----- -----
+Original default LZMA2:25 3290086 PASS 
+Patched default  PPMD     5762284 PASS 
+PPMd Ultra       PPMD     2411624 PASS 
+
+
+Selected PPMd Ultra (2411624 bytes): smallest of the successful candidates (lowest measured byte count).
+Reduction vs. original default: 878462 bytes (26.70%).
+Archive: C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-tests-knsve1nx\Kết quả nén\Tệp lớn.7z

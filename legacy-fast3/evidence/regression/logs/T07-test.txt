@@ -1,0 +1,23 @@
+7za.exe t T04.7z
+Exit code: 0
+
+
+7-Zip (a) 26.06 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-11-06
+
+Scanning the drive for archives:
+1 file, 3578912 bytes (3496 KiB)
+
+Testing archive: T04.7z
+--
+Path = T04.7z
+Type = 7z
+Physical Size = 3578912
+Headers Size = 122
+Method = LZMA2:22
+Solid = -
+Blocks = 1
+
+Everything is Ok
+
+Size:       67108864
+Compressed: 3578912

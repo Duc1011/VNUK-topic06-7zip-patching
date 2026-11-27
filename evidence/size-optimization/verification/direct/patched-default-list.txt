@@ -1,0 +1,302 @@
+C:\Users\ADMIN\Downloads\Programs\malware_project\bin\7za.exe l -sccUTF-8 -slt C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-tests-knsve1nx\candidate.7z
+Exit code: 0
+Elapsed seconds: 0.0155
+
+
+7-Zip (a) 26.06 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-11-06
+
+Scanning the drive for archives:
+1 file, 351369 bytes (344 KiB)
+
+Listing archive: C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-tests-knsve1nx\candidate.7z
+
+--
+Path = C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-tests-knsve1nx\candidate.7z
+Type = 7z
+Physical Size = 351369
+Headers Size = 453
+Method = PPMD
+Solid = +
+Blocks = 1
+
+----------
+Path = Tài liệu dự án
+Size = 0
+Packed Size = 0
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = Tài liệu dự án\Ghi chú
+Size = 0
+Packed Size = 0
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = Tài liệu dự án\Nhật ký
+Size = 0
+Packed Size = 0
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = Tài liệu dự án\Thư mục rỗng
+Size = 0
+Packed Size = 0
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = D
+CRC = 
+Encrypted = -
+Method = 
+Block = 
+
+Path = Tài liệu dự án\Ghi chú\Báo cáo 01.txt
+Size = 17737
+Packed Size = 350916
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = A
+CRC = C20CD6D8
+Encrypted = -
+Method = PPMD:o6:mem24
+Block = 0
+
+Path = Tài liệu dự án\Ghi chú\Báo cáo 02.txt
+Size = 17737
+Packed Size = 
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = A
+CRC = 5021AE16
+Encrypted = -
+Method = PPMD:o6:mem24
+Block = 0
+
+Path = Tài liệu dự án\Ghi chú\Báo cáo 03.txt
+Size = 17737
+Packed Size = 
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = A
+CRC = 21C579AC
+Encrypted = -
+Method = PPMD:o6:mem24
+Block = 0
+
+Path = Tài liệu dự án\Ghi chú\Báo cáo 04.txt
+Size = 17737
+Packed Size = 
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = A
+CRC = AF0A59CB
+Encrypted = -
+Method = PPMD:o6:mem24
+Block = 0
+
+Path = Tài liệu dự án\Ghi chú\Báo cáo 05.txt
+Size = 17737
+Packed Size = 
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = A
+CRC = DEEE8E71
+Encrypted = -
+Method = PPMD:o6:mem24
+Block = 0
+
+Path = Tài liệu dự án\Ghi chú\Báo cáo 06.txt
+Size = 17737
+Packed Size = 
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = A
+CRC = 4CC3F6BF
+Encrypted = -
+Method = PPMD:o6:mem24
+Block = 0
+
+Path = Tài liệu dự án\Ghi chú\Báo cáo 07.txt
+Size = 17737
+Packed Size = 
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = A
+CRC = 3D272105
+Encrypted = -
+Method = PPMD:o6:mem24
+Block = 0
+
+Path = Tài liệu dự án\Ghi chú\Báo cáo 08.txt
+Size = 17737
+Packed Size = 
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = A
+CRC = 8A2CB030
+Encrypted = -
+Method = PPMD:o6:mem24
+Block = 0
+
+Path = Tài liệu dự án\Ghi chú\Báo cáo 09.txt
+Size = 17737
+Packed Size = 
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = A
+CRC = FBC8678A
+Encrypted = -
+Method = PPMD:o6:mem24
+Block = 0
+
+Path = Tài liệu dự án\Ghi chú\Báo cáo 10.txt
+Size = 17737
+Packed Size = 
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = A
+CRC = 982DBF27
+Encrypted = -
+Method = PPMD:o6:mem24
+Block = 0
+
+Path = Tài liệu dự án\Ghi chú\Báo cáo 11.txt
+Size = 17737
+Packed Size = 
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = A
+CRC = E9C9689D
+Encrypted = -
+Method = PPMD:o6:mem24
+Block = 0
+
+Path = Tài liệu dự án\Ghi chú\Báo cáo 12.txt
+Size = 17737
+Packed Size = 
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = A
+CRC = 7BE41053
+Encrypted = -
+Method = PPMD:o6:mem24
+Block = 0
+
+Path = Tài liệu dự án\Nhật ký\Ngày 01.log
+Size = 539137
+Packed Size = 
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = A
+CRC = DCC3893D
+Encrypted = -
+Method = PPMD:o6:mem24
+Block = 0
+
+Path = Tài liệu dự án\Nhật ký\Ngày 02.log
+Size = 539574
+Packed Size = 
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = A
+CRC = E79ED76F
+Encrypted = -
+Method = PPMD:o6:mem24
+Block = 0
+
+Path = Tài liệu dự án\Nhật ký\Ngày 03.log
+Size = 539524
+Packed Size = 
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = A
+CRC = E337670C
+Encrypted = -
+Method = PPMD:o6:mem24
+Block = 0
+
+Path = Tài liệu dự án\Nhật ký\Ngày 04.log
+Size = 539518
+Packed Size = 
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = A
+CRC = 76A437D7
+Encrypted = -
+Method = PPMD:o6:mem24
+Block = 0
+
+Path = Tài liệu dự án\Nhật ký\Ngày 05.log
+Size = 539708
+Packed Size = 
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = A
+CRC = F92AB172
+Encrypted = -
+Method = PPMD:o6:mem24
+Block = 0
+
+Path = Tài liệu dự án\Nhật ký\Ngày 06.log
+Size = 539670
+Packed Size = 
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = A
+CRC = EEA475F0
+Encrypted = -
+Method = PPMD:o6:mem24
+Block = 0
+
+Path = Tài liệu dự án\Nhật ký\Ngày 07.log
+Size = 539642
+Packed Size = 
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = A
+CRC = 88041604
+Encrypted = -
+Method = PPMD:o6:mem24
+Block = 0
+
+Path = Tài liệu dự án\Nhật ký\Ngày 08.log
+Size = 539509
+Packed Size = 
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = A
+CRC = 636BAB92
+Encrypted = -
+Method = PPMD:o6:mem24
+Block = 0
+
+Path = Tài liệu dự án\Nhật ký\Ngày 09.log
+Size = 540122
+Packed Size = 
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = A
+CRC = E57EB4E2
+Encrypted = -
+Method = PPMD:o6:mem24
+Block = 0
+
+Path = Tài liệu dự án\Nhật ký\Ngày 10.log
+Size = 539741
+Packed Size = 
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = A
+CRC = E67EB8D7
+Encrypted = -
+Method = PPMD:o6:mem24
+Block = 0
+
+Path = Tài liệu dự án\Nhật ký\Ngày 11.log
+Size = 540411
+Packed Size = 
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = A
+CRC = 0515BA39
+Encrypted = -
+Method = PPMD:o6:mem24
+Block = 0
+
+Path = Tài liệu dự án\Nhật ký\Ngày 12.log
+Size = 538913
+Packed Size = 
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = A
+CRC = E9067454
+Encrypted = -
+Method = PPMD:o6:mem24
+Block = 0
+

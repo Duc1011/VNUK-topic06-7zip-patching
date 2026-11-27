@@ -1,0 +1,32 @@
+C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-bench-idon060o\x64\7za.exe l -sccUTF-8 -slt C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-bench-idon060o\candidate.7z
+Exit code: 0
+Elapsed seconds: 0.0196
+
+
+7-Zip (a) 26.06 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-11-06
+
+Scanning the drive for archives:
+1 file, 2098189 bytes (2050 KiB)
+
+Listing archive: C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-bench-idon060o\candidate.7z
+
+--
+Path = C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-bench-idon060o\candidate.7z
+Type = 7z
+Physical Size = 2098189
+Headers Size = 130
+Method = LZMA2:3m
+Solid = -
+Blocks = 1
+
+----------
+Path = Đã nén.zip
+Size = 2097926
+Packed Size = 2098059
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = A
+CRC = F262D4C6
+Encrypted = -
+Method = LZMA2:3m
+Block = 0
+

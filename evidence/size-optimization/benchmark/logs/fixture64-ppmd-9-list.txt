@@ -1,0 +1,32 @@
+C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-bench-idon060o\x64\7za.exe l -sccUTF-8 -slt C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-bench-idon060o\candidate.7z
+Exit code: 0
+Elapsed seconds: 0.016
+
+
+7-Zip (a) 26.06 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-11-06
+
+Scanning the drive for archives:
+1 file, 2411600 bytes (2356 KiB)
+
+Listing archive: C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-bench-idon060o\candidate.7z
+
+--
+Path = C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-bench-idon060o\candidate.7z
+Type = 7z
+Physical Size = 2411600
+Headers Size = 122
+Method = PPMD
+Solid = -
+Blocks = 1
+
+----------
+Path = input.txt
+Size = 67108864
+Packed Size = 2411478
+Modified = 2023-11-15 05:13:20.0000000
+Attributes = A
+CRC = 7911FBCA
+Encrypted = -
+Method = PPMD:o32:mem28
+Block = 0
+

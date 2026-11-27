@@ -1,0 +1,93 @@
+{
+  "single-text": {
+    "exit_code": 0,
+    "leftovers": [],
+    "winner": "PPMd Ultra",
+    "archive_bytes": 2411624,
+    "candidates": {
+      "Original default": 3290086,
+      "Patched default": 5762284,
+      "PPMd Ultra": 2411624
+    },
+    "baseline_bytes": 3290086,
+    "extract_exit_code": 0,
+    "paths_and_sha256_match": true,
+    "source_unchanged": true,
+    "candidate_failure_observed": false,
+    "verified": true
+  },
+  "unicode-tree-output-inside": {
+    "exit_code": 0,
+    "leftovers": [],
+    "winner": "Patched default",
+    "archive_bytes": 351369,
+    "candidates": {
+      "Original default": 643952,
+      "Patched default": 351369,
+      "PPMd Ultra": 396442
+    },
+    "baseline_bytes": 643952,
+    "extract_exit_code": 0,
+    "paths_and_sha256_match": true,
+    "source_unchanged": true,
+    "candidate_failure_observed": false,
+    "verified": true
+  },
+  "precompressed-zip": {
+    "exit_code": 0,
+    "leftovers": [],
+    "winner": "Original default",
+    "archive_bytes": 2098189,
+    "candidates": {
+      "Original default": 2098189,
+      "Patched default": 2149717,
+      "PPMd Ultra": 2142466
+    },
+    "baseline_bytes": 2098189,
+    "extract_exit_code": 0,
+    "paths_and_sha256_match": true,
+    "source_unchanged": true,
+    "candidate_failure_observed": false,
+    "verified": true
+  },
+  "missing-source": {
+    "exit_code": 1,
+    "leftovers": [],
+    "expected_message": "Source file or directory does not exist",
+    "message_found": true,
+    "destination_untouched": true,
+    "verified": true
+  },
+  "existing-output": {
+    "exit_code": 1,
+    "leftovers": [],
+    "expected_message": "Output already exists",
+    "message_found": true,
+    "destination_untouched": true,
+    "verified": true
+  },
+  "one-candidate-fails": {
+    "exit_code": 0,
+    "leftovers": [],
+    "winner": "PPMd Ultra",
+    "archive_bytes": 396450,
+    "candidates": {
+      "Original default": 643959,
+      "PPMd Ultra": 396450
+    },
+    "baseline_bytes": 643959,
+    "extract_exit_code": 0,
+    "paths_and_sha256_match": true,
+    "source_unchanged": true,
+    "candidate_failure_observed": true,
+    "verified": true
+  },
+  "all-fail-locked": {
+    "exit_code": 1,
+    "leftovers": [],
+    "expected_message": "No valid archive",
+    "message_found": true,
+    "destination_untouched": true,
+    "verified": true
+  }
+}

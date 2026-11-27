@@ -1,0 +1,24 @@
+C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-bench-idon060o\x64\7za.exe x -sccUTF-8 C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-bench-idon060o\candidate.7z -oC:\Users\ADMIN\Downloads\Programs\malware_project\topic06-bench-idon060o\extract-8sd_8_3d
+Exit code: 0
+Elapsed seconds: 1.0844
+
+
+7-Zip (a) 26.06 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-11-06
+
+Scanning the drive for archives:
+1 file, 2142466 bytes (2093 KiB)
+
+Extracting archive: C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-bench-idon060o\candidate.7z
+--
+Path = C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-bench-idon060o\candidate.7z
+Type = 7z
+Physical Size = 2142466
+Headers Size = 130
+Method = PPMD
+Solid = -
+Blocks = 1
+
+Everything is Ok
+
+Size:       2097926
+Compressed: 2142466

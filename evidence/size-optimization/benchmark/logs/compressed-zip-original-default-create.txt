@@ -1,0 +1,18 @@
+C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-bench-idon060o\x64\7za.exe a -sccUTF-8 -t7z -mmt=1 -- C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-bench-idon060o\candidate.7z "Đã nén.zip"
+Exit code: 0
+Elapsed seconds: 0.6142
+
+
+7-Zip (a) 26.06 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-11-06
+
+Scanning the drive:
+1 file, 2097926 bytes (2049 KiB)
+
+Creating archive: C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-bench-idon060o\candidate.7z
+
+Add new data to archive: 1 file, 2097926 bytes (2049 KiB)
+
+
+Files read from disk: 1
+Archive size: 2098189 bytes (2050 KiB)
+Everything is Ok

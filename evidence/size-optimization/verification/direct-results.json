@@ -1,0 +1,132 @@
+{
+  "original-default": {
+    "options": [],
+    "create_exit_code": 0,
+    "seconds": 1.7569,
+    "archive_bytes": 643952,
+    "archive_sha256": "ab74e09c97ae7684e01280b286568a5679edda6720218042c3b53d6f6a96f475",
+    "method": "LZMA2:23",
+    "list_exit_code": 0,
+    "test_exit_code": 0,
+    "extract_exit_code": 0,
+    "paths_and_sha256_match": true,
+    "verified": true
+  },
+  "original-ppmd5": {
+    "options": [
+      "-m0=PPMd",
+      "-mx=5"
+    ],
+    "create_exit_code": 0,
+    "seconds": 0.1096,
+    "archive_bytes": 351369,
+    "archive_sha256": "9a39a584dba52de1fd1cc8a63f37d45cef73ba00865b9d02bffef2d512c56748",
+    "method": "PPMD",
+    "list_exit_code": 0,
+    "test_exit_code": 0,
+    "extract_exit_code": 0,
+    "paths_and_sha256_match": true,
+    "verified": true
+  },
+  "original-ppmd9": {
+    "options": [
+      "-m0=PPMd",
+      "-mx=9"
+    ],
+    "create_exit_code": 0,
+    "seconds": 0.7934,
+    "archive_bytes": 396442,
+    "archive_sha256": "48a35b8f53abfa9a3db16d93c5d084a29fe0797675b6bceace7a4ec77e921520",
+    "method": "PPMD",
+    "list_exit_code": 0,
+    "test_exit_code": 0,
+    "extract_exit_code": 0,
+    "paths_and_sha256_match": true,
+    "verified": true
+  },
+  "original-copy": {
+    "options": [
+      "-mx=0"
+    ],
+    "create_exit_code": 0,
+    "seconds": 0.0292,
+    "archive_bytes": 6688755,
+    "archive_sha256": "f42b7da72d5a5657612cde968c70d61ba77ef16c26eaa148eeec2a45f34230d6",
+    "method": "Copy",
+    "list_exit_code": 0,
+    "test_exit_code": 0,
+    "extract_exit_code": 0,
+    "paths_and_sha256_match": true,
+    "verified": true
+  },
+  "patched-default": {
+    "options": [],
+    "create_exit_code": 0,
+    "seconds": 0.1153,
+    "archive_bytes": 351369,
+    "archive_sha256": "9a39a584dba52de1fd1cc8a63f37d45cef73ba00865b9d02bffef2d512c56748",
+    "method": "PPMD",
+    "list_exit_code": 0,
+    "test_exit_code": 0,
+    "extract_exit_code": 0,
+    "paths_and_sha256_match": true,
+    "verified": true,
+    "matches_reference": true,
+    "expected_method": "PPMD",
+    "reference": "original-ppmd5"
+  },
+  "patched-m0": {
+    "options": [
+      "-m0=LZMA2"
+    ],
+    "create_exit_code": 0,
+    "seconds": 1.6388,
+    "archive_bytes": 643952,
+    "archive_sha256": "ab74e09c97ae7684e01280b286568a5679edda6720218042c3b53d6f6a96f475",
+    "method": "LZMA2:23",
+    "list_exit_code": 0,
+    "test_exit_code": 0,
+    "extract_exit_code": 0,
+    "paths_and_sha256_match": true,
+    "verified": true,
+    "matches_reference": true,
+    "expected_method": "LZMA2",
+    "reference": "original-default"
+  },
+  "patched-mx": {
+    "options": [
+      "-mx=9"
+    ],
+    "create_exit_code": 0,
+    "seconds": 0.7077,
+    "archive_bytes": 396442,
+    "archive_sha256": "48a35b8f53abfa9a3db16d93c5d084a29fe0797675b6bceace7a4ec77e921520",
+    "method": "PPMD",
+    "list_exit_code": 0,
+    "test_exit_code": 0,
+    "extract_exit_code": 0,
+    "paths_and_sha256_match": true,
+    "verified": true,
+    "matches_reference": true,
+    "expected_method": "PPMD",
+    "reference": "original-ppmd9"
+  },
+  "patched-copy": {
+    "options": [
+      "-mx=0"
+    ],
+    "create_exit_code": 0,
+    "seconds": 0.0319,
+    "archive_bytes": 6688755,
+    "archive_sha256": "f42b7da72d5a5657612cde968c70d61ba77ef16c26eaa148eeec2a45f34230d6",
+    "method": "Copy",
+    "list_exit_code": 0,
+    "test_exit_code": 0,
+    "extract_exit_code": 0,
+    "paths_and_sha256_match": true,
+    "verified": true,
+    "matches_reference": true,
+    "expected_method": "Copy",
+    "reference": "original-copy"
+  }
+}

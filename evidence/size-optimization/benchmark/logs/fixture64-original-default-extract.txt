@@ -1,0 +1,24 @@
+C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-bench-idon060o\x64\7za.exe x -sccUTF-8 C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-bench-idon060o\candidate.7z -oC:\Users\ADMIN\Downloads\Programs\malware_project\topic06-bench-idon060o\extract-3kzmo_yk
+Exit code: 0
+Elapsed seconds: 0.2921
+
+
+7-Zip (a) 26.06 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-11-06
+
+Scanning the drive for archives:
+1 file, 3290062 bytes (3213 KiB)
+
+Extracting archive: C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-bench-idon060o\candidate.7z
+--
+Path = C:\Users\ADMIN\Downloads\Programs\malware_project\topic06-bench-idon060o\candidate.7z
+Type = 7z
+Physical Size = 3290062
+Headers Size = 122
+Method = LZMA2:25
+Solid = -
+Blocks = 1
+
+Everything is Ok
+
+Size:       67108864
+Compressed: 3290062
